@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600;700&family=Montserrat:wght@400;600;700&family=Roboto:wght@400;500;700&family=Playfair+Display:wght@400;600;700&family=Lato:wght@400;700&family=Oswald:wght@400;600;700&family=Merriweather:wght@400;700&family=Quicksand:wght@400;600;700&family=Nunito:wght@400;600;700&display=swap');
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  
+  .font-inter { font-family: 'Inter', sans-serif; }
+  .font-poppins { font-family: 'Poppins', sans-serif; }
+  .font-montserrat { font-family: 'Montserrat', sans-serif; }
+  .font-roboto { font-family: 'Roboto', sans-serif; }
+  .font-playfair-display { font-family: 'Playfair Display', serif; }
+  .font-lato { font-family: 'Lato', sans-serif; }
+  .font-oswald { font-family: 'Oswald', sans-serif; }
+  .font-merriweather { font-family: 'Merriweather', serif; }
+  .font-quicksand { font-family: 'Quicksand', sans-serif; }
+  .font-nunito { font-family: 'Nunito', sans-serif; }
+}
+
