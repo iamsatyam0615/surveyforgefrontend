@@ -6,6 +6,7 @@ export interface SurveyQuestion {
   description?: string;
   options?: string[];
   required: boolean;
+  hasOther?: boolean;
   min?: number; // For scale questions
   max?: number; // For scale questions
   conditional?: {
