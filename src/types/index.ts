@@ -5,6 +5,7 @@ export interface SurveyQuestion {
   text?: string; // Alternative to question
   description?: string;
   options?: string[];
+  required: boolean;
    hasOther?: boolean; // Allow "Other" option for multiple choice questions
   rows?: string[]; // For grid questions
   columns?: string[]; // For grid questions
