@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
@@ -10,7 +10,7 @@ import { useTheme } from '@/contexts/ThemeContext';
 import { HiSun, HiMoon, HiArrowLeft } from 'react-icons/hi';
 import { useState } from 'react';
 
-export default function AuthLoginPage() {
+function LoginForm() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const redirectTo = searchParams.get('redirect') || '/';
@@ -133,5 +133,13 @@ export default function AuthLoginPage() {
         </div>
       </motion.div>
     </div>
+  );
+}
+
+export default function AuthLoginPage() {
+  return (
+    <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
+      <LoginForm />
+    </Suspense>
   );
 }
